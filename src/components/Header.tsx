@@ -1,5 +1,5 @@
 import React from 'react';
-import { Terminal } from 'lucide-react';
+import logo from '../assets/logo.png';
 import { motion, useScroll, useTransform } from 'framer-motion';
 
 export const Header: React.FC = () => {
@@ -22,8 +22,7 @@ export const Header: React.FC = () => {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
                 <div className="flex items-center gap-3">
                     <div className="relative">
-                        <Terminal className="w-8 h-8 text-neon-green" />
-                        <div className="absolute inset-0 bg-neon-green/20 blur-lg animate-pulse-slow" />
+                        <img src={logo} alt="Logo" className="w-10 h-10 object-contain drop-shadow-[0_0_8px_rgba(6,182,212,0.8)]" />
                     </div>
                     <div>
                         <h1 className="text-xl font-bold font-sans tracking-tight text-white flex items-center gap-2">
