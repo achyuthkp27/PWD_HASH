@@ -37,7 +37,7 @@ export const hashArgon2 = async (password: string, params: Argon2Params): Promis
         type: params.type === 'argon2id' ? argon2.ArgonType.Argon2id :
             params.type === 'argon2i' ? argon2.ArgonType.Argon2i :
                 argon2.ArgonType.Argon2d,
-        distPath: typeof self !== 'undefined' ? new URL('/', self.location.href).toString() : undefined
+        distPath: import.meta.env.BASE_URL
     });
 
     const end = performance.now();
